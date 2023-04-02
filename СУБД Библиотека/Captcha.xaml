@@ -1,0 +1,19 @@
+﻿<Window x:Class="СУБД_Библиотека.Captcha"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:СУБД_Библиотека"
+        mc:Ignorable="d"
+        Title="Captcha" Height="350" Width="525" WindowStartupLocation="CenterScreen">
+    <Grid Visibility="Visible">
+        <Button Content="   Изменить код" Height="40" HorizontalAlignment="Left" Margin="50,200,0,0" VerticalAlignment="Top" Width="160" Click="Code_Click"/>
+        <Button Content="          Далее" Height="40" HorizontalAlignment="Left" Margin="240,200,0,0" VerticalAlignment="Top" Width="160" Click="Input_Click"/>
+        <TextBox Name="Input_box" HorizontalAlignment="Left" Margin="50,0,0,0" Width="350"  FontWeight="Bold"
+                 VerticalAlignment="Center" FontSize="30" Background="#FFF6F6F6"/>
+        <TextBlock HorizontalAlignment="Left" Margin="50,80,0,0" FontSize="30" Name="Code_block"  FontWeight="Bold"
+                   TextAlignment="Center" FontFamily="Arial" Width="350" Height="40"/>
+        <TextBlock HorizontalAlignment="Left" Margin="20,30,0,0" Text="Для подтверждения входа введите указанный код" Width="429"/>
+    </Grid>
+
+</Window>

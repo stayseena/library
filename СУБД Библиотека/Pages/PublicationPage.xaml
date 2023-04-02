@@ -1,0 +1,25 @@
+﻿<Page x:Class="СУБД_Библиотека.Pages.PublicationPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:СУБД_Библиотека.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1650"
+      Title="PublicationPage">
+
+    <Grid>
+        <DataGrid x:Name="DGridPublication" MouseRightButtonDown="Mouse_right_click">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Публикация" Binding="{Binding Title}" Width="450"/>
+                <DataGridTextColumn Header="Автор" Binding="{Binding Author}" Width="*"/>
+                <DataGridTextColumn Header="Год издания" Binding="{Binding Years}" Width="130"/>
+                <DataGridTextColumn Header="Жанр" Binding="{Binding Genre}" Width="130"/>
+                <DataGridTextColumn Header="Статус" Binding="{Binding ActualText}" Width="160"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="             Добавить" Margin="880,930,0,0" Click="AddPublication_button_Click"/>
+        <Button Content="        Редактировать" Margin="380,930,0,0" Click="EditPublication_button_Click"/>
+        <Button Content="              Удалить" Margin="1380,930,0,0" Click="Delete_button_Click"/>
+    </Grid>
+</Page>

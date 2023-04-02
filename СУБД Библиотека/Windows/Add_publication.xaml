@@ -1,0 +1,23 @@
+﻿<Window x:Class="СУБД_Библиотека.Windows.Add_publication"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:СУБД_Библиотека.Windows"
+        mc:Ignorable="d"
+        Title="Add_publication" Height="500" Width="800"  WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TextBlock Margin="0,20,500,0" Text="Полное название" Width="160"/>
+        <TextBlock Margin="0,100,500,0" Text="Год выпуска" Width="160"/>
+        <TextBlock Margin="0,180,500,0" Text="Автор" Width="160"/>
+        <TextBlock Margin="0,270,500,0" Text="Жанр" Width="160"/>
+        <TextBox Text="{Binding Title}" Margin="0,50,300,0" MaxLength="100" Height="40" Width="400" FontSize="23"/>
+        <TextBox Text="{Binding Years}" MaxLength="4" Width="400" Margin="0,130,300,0" FontSize="23"/>
+        <ComboBox SelectedItem="{Binding Author}" x:Name="Authors_box" DisplayMemberPath="Name" SelectedValuePath="ID" Height="40" Width="400" Margin="0,0,300,0"/>
+        <ComboBox SelectedItem="{Binding Genre}" x:Name="Genre_box" DisplayMemberPath="Name" SelectedValuePath="ID" Height="40" Width="400" Margin="0,170,300,0"/>
+        <Button Content="        Сохранить" Margin="0,400,520,0" Click="Create_button_Click" Width="180"/>
+        <Button x:Name="Back_button" Content="            Назад" Margin="0,400,90,0" Click="Back_button_Click" Width="180"/>
+        <Image x:Name="Image" Height="300" Width="300"  Margin="450,0,0,150"/>
+        <Button Content="        Изображение" Margin="400,400,0,0" Click="Image_button_click"/>
+    </Grid>
+</Window>

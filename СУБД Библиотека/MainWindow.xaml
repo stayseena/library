@@ -1,0 +1,23 @@
+﻿<Window x:Class="СУБД_Библиотека.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:СУБД_Библиотека"
+        mc:Ignorable="d"
+        Title="Стартовый экран" Height="400" Width="450" WindowStartupLocation="CenterScreen">
+   
+    <Grid>
+
+        <Image Source="/Resources/Logotip.png" Margin="0,10,320,280"/>
+
+        <TextBlock Height="48" Text="Авторизация" Width="NaN" FontSize="40" Margin="120,45,50,0" FontWeight="Bold" Foreground="#FF534C4C"/>
+        <Button Content="    Войти" Margin="0,150,250,0" Width="100" Click="Input_Click" Height="40"/>
+        <TextBox x:Name="Email_box" HorizontalAlignment="Center" Margin="0,110,0,0" Foreground="DarkGray"
+                 Height="38" Width="354" FontSize="26"/>
+        <Button Content="    Выйти из программы" Width="350" Margin="0,250,0,0" Click="Exit_button_Click"/>
+        <Button Content="   Создать новый аккаунт" Width="240" Margin="110,150,0,0" Click="Create_button_Click" Height="40"/>
+        <PasswordBox x:Name="Password_box" HorizontalAlignment="Center" Margin="0,0,0,10" Foreground="DarkGray" BorderBrush="{x:Null}"
+                 Height="38" Width="354" FontSize="26" Background="#FFF6F6F6" HorizontalContentAlignment="Center"/>
+    </Grid>
+</Window>

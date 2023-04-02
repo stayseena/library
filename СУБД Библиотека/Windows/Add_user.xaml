@@ -1,0 +1,23 @@
+﻿<Window x:Class="СУБД_Библиотека.Windows.Add_user"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:СУБД_Библиотека.Windows"
+        mc:Ignorable="d"
+        Title="Add_user" Height="650" Width="500" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TextBlock Margin="0,40,0,450" Text="Введите ФИО"/>
+        <TextBlock Margin="0,140,0,350" Text="Телефон (формат X-XXX-XXX-XX-XX)"/>
+        <TextBlock Margin="0,240,0,250" Text="Адрес электронной почты"/>
+        <TextBlock Margin="0,340,0,150" Text="Пароль"/>
+        <TextBlock Margin="0,440,0,50" Text="Тип пользователя"/>
+        <TextBox Text="{Binding Name}" MaxLength="50" Margin="40,70,60,380" FontSize="30"/>
+        <TextBox Text="{Binding Phone}" MaxLength="15" Margin="40,170,60,180" FontSize="30"/>
+        <TextBox Text="{Binding Login}" MaxLength="30" Margin="40,270,60,0" FontSize="30"/>
+        <TextBox Text="{Binding Password}" MaxLength="20" Margin="40,370,60,0" FontSize="30"/>
+        <Button Content="        Сохранить" Margin="0,490,230,0" Click="Create_button_Click" Width="190"/>
+        <Button Content="            Назад" Margin="190,490,0,0" Click="Back_button_Click" Width="190"/>
+        <ComboBox SelectedItem="{Binding RoleID}" x:Name="Role_box" DisplayMemberPath="Name" Height="40" Width="400" Margin="0,350,20,0" IsEditable="False"/>
+    </Grid>
+</Window>

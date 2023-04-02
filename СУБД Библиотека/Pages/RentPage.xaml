@@ -1,0 +1,24 @@
+﻿<Page x:Class="СУБД_Библиотека.Pages.RentPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:СУБД_Библиотека.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1650"
+      Title="RentPage">
+
+    <Grid>
+        <DataGrid x:Name="DGridRent" Margin="0,30,30,80" MouseRightButtonDown="Mouse_right_click">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Читатель" Binding="{Binding Reader}" Width="350"/>
+                <DataGridTextColumn Header="Публикация" Binding="{Binding Publication}" Width="350"/>
+                <DataGridTextColumn Header="Дата взятия" Binding="{Binding Date_of_taking}" Width="160"/>
+                <DataGridTextColumn Header="Дата возврата" Binding="{Binding Return_Date}" Width="160"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="      Добавить запись" Margin="880,930,0,0" Click="AddRent_button_Click"/>
+        <Button Content="              Возврат" Margin="380,930,0,0" Click="EditRent_button_Click"/>
+        <Button Content="              Удалить" Margin="1380,930,0,0" Click="Delete_button_Click"/>
+    </Grid>
+</Page>
